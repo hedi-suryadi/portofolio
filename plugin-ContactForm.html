@@ -1,0 +1,327 @@
+
+<style>
+.background-style-linux {
+  display: flex;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.background-style-linux .container {
+    padding: 5% 15% 0% 15%;
+    background: #000112bf;
+    width: 100%;
+    height: 100%;
+}
+
+.background-style-linux .container .screen {
+  position: relative;
+  background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;
+  border-radius: 15px;
+}
+
+.background-style-linux .container .screen:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.background-style-linux .container .screen .screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.background-style-linux .container .screen .screen-header .screen-header-left {
+  margin-right: auto;
+  width: 100%;
+  text-align: right;
+}
+
+.background-style-linux .container .screen .screen-header .screen-header-left .screen-header-button {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: #ed1c6f;
+  cursor:pointer;
+}
+
+.background-style-linux .container .screen .screen-body {
+  display: flex;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color:#09b2be;
+  font-size: 26px;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 61px;
+  height: 4px;
+  background:#09b2be;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group {
+  margin-bottom: 15px;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group.message {
+  margin-top: 40px;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control::placeholder {
+  color: #666;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-button {
+    background: #00725d45;
+    color: #09b2be;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid;
+    margin-top: 2%;
+    width: 100%;
+    padding: 1%;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-button:hover {
+  background: #00725dc4;
+}
+
+#sendemailtome{visibility: hidden;}
+
+@media screen and (max-width: 520px) {
+  .background-style-linux .container .screen .screen-body {
+    flex-direction: column;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left {
+    margin-bottom: 0px;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title {
+    flex-direction: row;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title span {
+    margin-right: 12px;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background-style-linux{
+    top: 6px;
+  }
+  .background-style-linux .container{
+    padding: 1%;
+  }
+  .background-style-linux .container .screen .screen-body {
+    padding: 0px;
+  }
+
+  .background-style-linux .container .screen .screen-bod .screen-body-item {
+    padding: 0;
+  }
+  .background-style-linux .container .screen .screen-body .screen-body-item {
+    padding: 25px;
+  }
+}
+</style>
+
+
+
+<div class="background-style-linux animasikan fadeInDown ">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button "></div>
+        </div>
+       
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>The button will appear when all is filled </span>
+           
+          </div>
+          <div class="app-contact"></div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <form  id="contact-form" method="post">
+              <input type="hidden" name="contact_number">
+              <div class="app-form-group">
+                <input type="text" class="app-form-control"  id="email_name" name="user_name" placeholder=" Name" required>
+              </div>
+              <div class="app-form-group">
+                <input type="email" id="emailtype" class="app-form-control" name="user_email" placeholder=" your@email.com" >
+                <span class="txt-r-email"></span>
+              </div>
+            
+              <div class="app-form-group message">
+                <input type="text" id="email_message" class="app-form-control" name="message" placeholder=" Message" required>
+              </div>
+              <div class="app-form-group buttons">
+                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
+                <div id='html_element'></div>
+                <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+<script  type="text/javascript">
+
+  const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+const validate = () => {
+  const $resultemail = $('.txt-r-email');
+  const email = $('#emailtype').val();
+  $resultemail.text('');
+  if (validateEmail(email)) {
+    $resultemail.text(email + ' is valid');
+    $resultemail.css('color', '#1be11b');
+  } else {
+    $resultemail.text(email + ' is not valid');
+    $resultemail.css('color', '#ff6060');
+  }
+  return false;
+}
+$('#emailtype').on('input', validate);
+
+
+
+$(document).one("click","#sendemailtome", function () {
+  // $('#sendemailtome').css('visibility','hidden');
+  emailjs.init('dqRpsNKRSHTHV8rB5');
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  $("#sendemailtome").attr("disabled","disebled");
+                  $("#sendemailtome").text("Please wait..");
+                  // generate a five digit number for the contact_number variable
+                  this.contact_number.value = Math.random() * 100000 | 0;
+                  // these IDs from the previous steps
+                  emailjs.sendForm('service_ip8gcdw', 'template_9bx0vyn', this)
+                      .then(function() {
+                          console.log('SUCCESS!');
+                          $('.background-style-linux .container .screen .screen-body').html("");
+                          $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #ffffff1a; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
+                      }, function(error) {
+                          console.log('FAILED...', error);
+                      });
+        });
+    
+});
+
+
+$('#contact-form').on('keyup keypress', function(e) {
+  var keyCode = e.keyCode || e.which;
+  if (keyCode === 13) { 
+    e.preventDefault();
+    return false;
+  }
+  var responcaptchagoogle = grecaptcha.getResponse();
+  const email = $('#emailtype').val();
+  if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email) || responcaptchagoogle.length == 0){
+    $("#sendemailtome").css("visibility","hidden");
+  }else{
+    $("#sendemailtome").css("visibility","visible");
+  }
+
+});
+
+var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8',
+      'callback' : correctCaptcha
+    });
+  };
+
+  var correctCaptcha = function(response) {
+  var responcaptchagoogle = grecaptcha.getResponse();
+  const email = $('#emailtype').val();
+    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)|| responcaptchagoogle.length == 0){
+    $("#sendemailtome").css("visibility","hidden");
+  }else{
+    $("#sendemailtome").css("visibility","visible");
+  }
+};
+
+</script>
