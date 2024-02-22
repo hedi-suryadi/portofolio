@@ -209,7 +209,7 @@
       <div class="screen-body">
         <div class="screen-body-item left">
           <div class="app-title">
-            <span>The button will appear when all is filled </span>
+            <span>The button will appear when all is  </span>
            
           </div>
           <div class="app-contact"></div>
@@ -230,7 +230,7 @@
                 <input type="text" id="email_message" class="app-form-control" name="message" placeholder=" Message" required>
               </div>
               <div class="app-form-group buttons">
-                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
+                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdhYmQpAAAAAGzZLKYOfMfvOUXguTpddWdzEv3e"></div>
                 <div id='html_element'></div>
                 <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
               </div>
@@ -242,7 +242,7 @@
   </div>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
 
 <script  type="text/javascript">
 
@@ -270,7 +270,7 @@ $('#emailtype').on('input', validate);
 
 $(document).one("click","#sendemailtome", function () {
   // $('#sendemailtome').css('visibility','hidden');
-  emailjs.init('dqRpsNKRSHTHV8rB5');
+  emailjs.init('sfDSBMGOqqvqFqUtJ');
         document.getElementById('contact-form').addEventListener('submit', function(event) {
                   event.preventDefault();
                   $("#sendemailtome").attr("disabled","disebled");
@@ -309,7 +309,7 @@ $('#contact-form').on('keyup keypress', function(e) {
 
 var onloadCallback = function() {
     grecaptcha.render('html_element', {
-      'sitekey' : '6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8',
+      'sitekey' : '6LdhYmQpAAAAAGzZLKYOfMfvOUXguTpddWdzEv3e',
       'callback' : correctCaptcha
     });
   };
